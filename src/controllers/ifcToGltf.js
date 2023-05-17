@@ -10,7 +10,7 @@ const descriptionGET = (req, res) => {
       "Content-Type": "text/html",
     },
   };
-  res.status(200).sendFile("some-operation.html", options);
+  res.status(200).sendFile("ifcToGltf.html", options);
 };
 
 const IfcToGltfGET = (req, res) => {

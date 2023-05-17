@@ -10,8 +10,8 @@ const homeRouter = require("./routes/home");
 app.use("/", homeRouter);
 
 // Assigning the routes to the "/cnv" URI
-const opRouter = require("./routes/cnv");
-app.use("/cnv", opRouter);
+const cnvRouter = require("./routes/cnv");
+app.use("/cnv", cnvRouter);
 
 app.listen(PORT, () => {
   console.log(`Microservice available at: http://localhost:${PORT}/`);
