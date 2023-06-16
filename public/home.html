@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Microservice Template</title>
+  <title>COLLADA-to-glTF Converter Microservice</title>
+  <script>
+    function redirectIfctoLbd() {
+      var currentURL = window.location.href;
+      var newURL = currentURL + "conv/collada-to-gltf";
+      window.location.href = newURL;
+    }
+  </script>
 </head>
+
 <body>
-  <h2>Microservice Template for Node.js</h2>
-  <p>This web service provides the user with a practical template to start building your own Microservice.</p>
-  <p>Acces the "<a href="http://localhost:3001/cnv">cnv</a>" type, which represents the operation performed by the web service.</p>
+  <h2>COLLADA-to-glTF Converter Microservice</h2>
+  <p>The COLLADA-to-glTF Converter Microservice uses the same structure as the <a
+      href="https://github.com/stelemme/template-microservice-js">Express
+      template</a>. Two folders are added to the root of the Microservice. The first folder is the base-files directory
+    which temporarily houses the COLLADA and glTF-file
+    during conversion. After the conversion is done, all files are deleted from this folder. The second folder is the
+    cli folder. CLI stands for Command Line Interface. The COLLADE-to-glTF
+    conversion happens by using the COLLADA2GLTF application provided by the KhronosGroup. This application can be found
+    in the cli folder. In the colladaToGltf.js file, two controller
+    functions are present which handle the GET and POST response of the following endpoint.</p>
+  <p><a href="javascript:void(0);" onclick="redirectIfctoLbd();">
+      <script>document.write(window.location.href)</script>conv/collada-to-gltf
+    </a></p>
+  <p>The GET response of the endpoint returns a JSON object that specifies which methods and data types are supported by
+    the endpoint. This endpoint must receive a COLLADA-file. The POST response then returns the converted glTF-file if
+    the request is correctly sent in the body of the request. The process can be tested using Postman
+    or a Controller Microservice.</p>
 </body>
+
 </html>
